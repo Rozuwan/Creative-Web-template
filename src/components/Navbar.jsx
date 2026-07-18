@@ -4,7 +4,7 @@ import NavLogo from "./NavLogo";
 
 const Navbar = () => {
   return (
-    <header className="px-4 py-4">
+    <header className="px-6 py-4 bg-gray-50">
       <nav className="mx-auto flex max-w-6xl items-center justify-between">
         <NavLogo />
 
