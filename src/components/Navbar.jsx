@@ -1,0 +1,20 @@
+import Signinbtn from "./button/Signinbtn";
+import Communitybtn from "./button/Communitybtn";
+import NavLogo from "./NavLogo";
+
+const Navbar = () => {
+  return (
+    <header className="px-4 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between">
+        <NavLogo />
+
+        <div className="flex items-center gap-8 font-sans text-base">
+          <Signinbtn />
+          <Communitybtn />
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
