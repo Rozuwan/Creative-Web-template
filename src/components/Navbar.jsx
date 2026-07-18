@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="mx-auto flex max-w-6xl items-center justify-between">
         <NavLogo />
 
-        <div className="flex items-center gap-8 font-sans text-base">
+        <div className="flex items-center gap-8 font-sans text-base px-10">
           <Signinbtn />
           <Communitybtn />
         </div>
