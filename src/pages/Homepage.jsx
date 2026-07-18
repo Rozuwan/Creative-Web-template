@@ -29,7 +29,8 @@ const Homepage = () => {
     <>
       <Navbar />
 
-      <main>
+      {/* overflow-x-hidden prevents horizontal scroll on small screens */}
+      <main className="overflow-x-hidden">
         {/* Hero Section */}
         <section className="rounded-bl-[80px]  bg-gray-50 px-10 py-18 overflow-hidden">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
@@ -62,7 +63,8 @@ const Homepage = () => {
                 to set it up once, and get beautiful results forever.
               </p>
 
-              <div className="flex items-center gap-4">
+              {/* Center buttons on mobile, left-align on desktop */}
+              <div className="flex items-center justify-center gap-4 md:justify-start">
                 <Communitybtn />
                 <Link
                   to="/signin"
@@ -72,7 +74,8 @@ const Homepage = () => {
                 </Link>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-15">
+              {/* Center stats on mobile, left-align on desktop */}
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start">
                 {stats.map(({ value, label }) => (
                   <div key={label}>
                     <h3 className="text-2xl font-bold">{value}</h3>
@@ -89,7 +92,7 @@ const Homepage = () => {
               <img
                 src={HeroImg}
                 alt="Creative minds platform hero illustration"
-                className=" w-full scale-130 translate-x-55 translate-y-10"
+                className="w-full max-w-full h-auto object-contain md:max-w-none md:scale-130 md:translate-x-55 md:translate-y-10"
               />
             </div>
           </div>
@@ -101,8 +104,8 @@ const Homepage = () => {
           <div className="mx-auto max-w-6xl  ">
             <h2 className="text-5xl font-bold">Latest Inspiration</h2>
 
-            {/* button */}
-            <div className="flex gap-2 mt-18 ">
+            {/* button row: wrap on mobile, left-align */}
+            <div className="flex flex-wrap justify-center gap-2 mt-18 md:justify-start">
               {btnData.map(({ data, span }) => {
                 return (
                   <button
@@ -120,7 +123,8 @@ const Homepage = () => {
 
             {/* grid images */}
             <div className="relative">
-              <div className="grid grid-cols-3 gap-6 mt-10">
+              {/* 1 col mobile, 2 cols tablet, 3 cols desktop */}
+              <div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {loading ? (
                   <div className="col-span-3 flex items-center justify-center py-20">
                     Loading...
@@ -139,9 +143,15 @@ const Homepage = () => {
               {/* Bottom Fade */}
               <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-white via-white/70 to-transparent pointer-events-none" />
 
-              <div className="absolute top-180 right-120 -translate-y-3">
+              {/* Desktop floating button — hidden on mobile/tablet */}
+              <div className="hidden lg:block absolute top-180 right-120 -translate-y-3">
                 <Communitybtn />
               </div>
+            </div>
+
+            {/* Mobile/tablet inline button — hidden on desktop */}
+            <div className="flex justify-center lg:hidden mt-6">
+              <Communitybtn />
             </div>
           </div>
         </section>

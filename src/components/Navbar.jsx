@@ -8,7 +8,8 @@ const Navbar = () => {
       <nav className="mx-auto flex max-w-6xl items-center justify-between">
         <NavLogo />
 
-        <div className="flex items-center gap-8 font-sans text-base px-10">
+        {/* Tighter gap & padding on mobile, comfortable on desktop */}
+        <div className="flex items-center gap-3 font-sans text-base px-2 md:gap-8 md:px-10">
           <Signinbtn />
           <Communitybtn />
         </div>
