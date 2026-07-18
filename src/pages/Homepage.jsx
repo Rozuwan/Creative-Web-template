@@ -1,15 +1,30 @@
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import HeroImg from "../assets/hero.png";
-import Communitybtn from "./button/Communitybtn";
+import Communitybtn from "../components/button/Communitybtn";
 import { Link } from "react-router-dom";
+import { usePicsum } from "../context/PiscumContext";
+import Card from "../components/Card";
 
+// hero section stats
 const stats = [
   { value: "27M", label: "Inspiration" },
   { value: "14K", label: "Creators" },
   { value: "8K", label: "Projects" },
 ];
 
+// second section btn data
+const btnData = [
+  { data: "View All", span: "2.7k" },
+  { data: "Illustration", span: "1.2k" },
+  { data: "Branding", span: "1.4k" },
+  { data: "Product Design", span: "1.7k" },
+  { data: "Typography", span: "989" },
+];
+
 const Homepage = () => {
+  const { images, loading, error } = usePicsum();
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>{error}</h1>;
   return (
     <>
       <Navbar />
@@ -80,11 +95,57 @@ const Homepage = () => {
           </div>
         </section>
         {/* End Hero section */}
+
+        {/* Second layout */}
         <section className="px-10 py-18">
-          <div className="mx-auto max-w-6xl">
-            <h2>Latest Inspiration</h2>
+          <div className="mx-auto max-w-6xl  ">
+            <h2 className="text-5xl font-bold">Latest Inspiration</h2>
+
+            {/* button */}
+            <div className="flex gap-2 mt-18 ">
+              {btnData.map(({ data, span }) => {
+                return (
+                  <button
+                    key={data}
+                    className="px-2 py-1 border-2 border-text-secondary rounded-full text-base active:scale-95"
+                  >
+                    {data}{" "}
+                    <span className="text-base bg-text-secondary rounded-full px-2 text-white">
+                      {span}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* grid images */}
+            <div className="relative">
+              <div className="grid grid-cols-3 gap-6 mt-10">
+                {loading ? (
+                  <div className="col-span-3 flex items-center justify-center py-20">
+                    Loading...
+                  </div>
+                ) : error ? (
+                  <div className="col-span-3 flex items-center justify-center py-20 text-red-500">
+                    {error}
+                  </div>
+                ) : (
+                  images
+                    .slice(0, 9)
+                    .map((image) => <Card key={image.id} image={image} />)
+                )}
+              </div>
+
+              {/* Bottom Fade */}
+              <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-white via-white/70 to-transparent pointer-events-none" />
+
+              <div className="absolute top-180 right-120 -translate-y-3">
+                <Communitybtn />
+              </div>
+            </div>
           </div>
         </section>
+        {/*END Second layout */}
       </main>
     </>
   );

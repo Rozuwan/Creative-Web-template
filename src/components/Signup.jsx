@@ -1,9 +1,13 @@
 import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import NavLogo from "./NavLogo";
-
+import { usePicsum } from "../context/PiscumContext";
 
 const Signup = () => {
+  const { images, loading, error } = usePicsum();
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
+
   return (
     <>
       {/* header */}
@@ -18,8 +22,7 @@ const Signup = () => {
       {/* profile */}
       <div className="h-15 w-15 overflow-hidden rounded-full mx-auto mb-3">
         <img
-          src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D"
-          alt="Profile"
+          src={images[0].download_url}
           className="h-full w-full object-cover"
         />
       </div>
