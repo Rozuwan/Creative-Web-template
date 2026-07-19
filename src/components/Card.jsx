@@ -1,3 +1,5 @@
+// Second section grid card
+
 import { FaRegHeart } from "react-icons/fa";
 
 const Card = ({ image }) => {

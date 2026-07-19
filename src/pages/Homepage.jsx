@@ -24,7 +24,7 @@ const btnData = [
   { data: "Product Design", span: "1.7k" },
   { data: "Typography", span: "989" },
 ];
-// Third Section card data
+// Third Section (user data with photo)
 const userData = [
   {
     name: "Emma Wilson",
@@ -100,14 +100,14 @@ const Homepage = () => {
         <section className="rounded-bl-[80px]  bg-gray-50 px-10 py-18 overflow-hidden">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
             {/* Left content */}
-            <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left">
-              <h1 className="font-cabinet text-4xl font-bold leading-tight md:text-[64px] lg:text-[88px] lg:font-extrabold">
+            <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left ">
+              <h1 className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold">
                 The platform for creative{" "}
                 <span className="relative inline-block text-primary">
                   minds
-                  {/* UnderLine  */}
+                  {/* UnderLine below minds! */}
                   <svg
-                    className="absolute bottom-1 -left-2 "
+                    className="absolute -bottom-0.5 -left-2 "
                     viewBox="0 0 100 12"
                     preserveAspectRatio="none"
                   >
@@ -128,18 +128,16 @@ const Homepage = () => {
                 to set it up once, and get beautiful results forever.
               </p>
 
-              {/* Center buttons on mobile, left-align on desktop */}
               <div className="flex items-center justify-center gap-4 md:justify-start">
                 <Communitybtn />
                 <Link
                   to="/signin"
-                  className="inline-block rounded-full border border-gray-300 bg-white px-8 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95"
+                  className="inline-block rounded-full border border-gray-300 bg-white px-6 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95"
                 >
                   Sign In
                 </Link>
               </div>
 
-              {/* Center stats on mobile, left-align on desktop */}
               <div className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start">
                 {stats.map(({ value, label }) => (
                   <div key={label}>
@@ -164,7 +162,7 @@ const Homepage = () => {
         </section>
         {/* End Hero section */}
 
-        {/* Second layout */}
+        {/* Second Section */}
         <section className="px-10 py-18">
           <div className="mx-auto max-w-6xl  ">
             <h2 className="text-5xl font-extrabold font-cabinet">
@@ -219,7 +217,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/*END Second layout */}
+        {/*END Second section */}
 
         {/* Third Section */}
         <section className="px-10 py-18 bg-bg-secondary">
