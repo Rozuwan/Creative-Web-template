@@ -24,77 +24,67 @@ const btnData = [
   { data: "Product Design", span: "1.7k" },
   { data: "Typography", span: "989" },
 ];
-// Third Section card data 
-const cardData = [
+// Third Section card data
+const userData = [
   {
-    author: "Jeffery Rogers",
-    date: "06 September",
-    title: "Toughening the Mind by Challenging the Body",
+    name: "Emma Wilson",
+    title: "UI/UX Designer",
     image:
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
   },
   {
-    author: "Alina Meyers",
-    date: "12 October",
-    title: "Finding Stillness in the Middle of Chaos",
+    name: "James Carter",
+    title: "Frontend Developer",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
   },
   {
-    author: "Marcus Lee",
-    date: "18 March",
-    title: "Exploring the Hidden Beauty of Mountain Trails",
+    name: "Sophia Brown",
+    title: "Product Designer",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80",
+      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
   },
   {
-    author: "Sophia Carter",
-    date: "25 April",
-    title: "Designing Spaces That Inspire Everyday Living",
+    name: "Michael Lee",
+    title: "Software Engineer",
     image:
-      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600&q=80",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
   {
-    author: "Daniel Brooks",
-    date: "09 May",
-    title: "The Art of Slowing Down in a Fast-Paced World",
+    name: "Olivia Martin",
+    title: "Marketing Lead",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=80",
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
   },
   {
-    author: "Emma Wilson",
-    date: "14 June",
-    title: "Capturing Golden Hour Through a Creative Lens",
+    name: "Daniel Walker",
+    title: "Backend Developer",
     image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80",
+      "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=800&q=80",
   },
   {
-    author: "Nathan Harris",
-    date: "21 July",
-    title: "Adventure Begins Where the Road Ends",
+    name: "Ava Johnson",
+    title: "Content Creator",
     image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600&q=80",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
   },
   {
-    author: "Olivia Bennett",
-    date: "03 August",
-    title: "Creating Calm Interiors with Natural Elements",
+    name: "Ethan Harris",
+    title: "DevOps Engineer",
     image:
-      "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=600&q=80",
+      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800&q=80",
   },
   {
-    author: "Ryan Cooper",
-    date: "17 November",
-    title: "Moments That Turn Ordinary Trips into Memories",
+    name: "Mia Thompson",
+    title: "Community Manager",
     image:
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80",
   },
   {
-    author: "Isabella Moore",
-    date: "29 December",
-    title: "Embracing Nature as the Ultimate Escape",
+    name: "Noah Anderson",
+    title: "Full Stack Developer",
     image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80",
+      "https://images.unsplash.com/photo-1641260774125-04d527b376a5?q=80&w=710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 const Homepage = () => {
@@ -177,7 +167,9 @@ const Homepage = () => {
         {/* Second layout */}
         <section className="px-10 py-18">
           <div className="mx-auto max-w-6xl  ">
-            <h2 className="text-5xl font-extrabold font-cabinet">Latest inspiration</h2>
+            <h2 className="text-5xl font-extrabold font-cabinet">
+              Latest inspiration
+            </h2>
 
             {/* button*/}
             <div className="flex flex-wrap justify-center gap-2 mt-12 md:justify-start">
@@ -232,8 +224,10 @@ const Homepage = () => {
         {/* Third Section */}
         <section className="px-10 py-18 bg-bg-secondary">
           <div className="mx-auto max-w-6xl  ">
-            <h2 className="text-white font-cabinet font-extrabold text-5xl text-center mb-20">Trending collections</h2>
-            <TrendingCollectionSlider cardData={cardData} />
+            <h2 className="text-white font-cabinet font-extrabold text-5xl text-center mb-20">
+              Trending collections
+            </h2>
+            <TrendingCollectionSlider userData={userData} images={images} />
           </div>
         </section>
         {/* END Third Section */}
