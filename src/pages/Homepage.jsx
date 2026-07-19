@@ -10,6 +10,7 @@ import { usePicsum } from "../context/PiscumContext";
 import "swiper/css";
 import TrendingCollectionSlider from "../components/TrendingCollectionSlider";
 import CreatorCard from "../components/CreatorCard";
+import PriceCard from "../components/PriceCard";
 
 // hero section stats
 const stats = [
@@ -273,6 +274,22 @@ const Homepage = () => {
           </div>
         </section>
         {/* END Fourth Section */}
+
+        {/* Fifth Section */}
+        <section className="px-10 py-18 bg-gray-50">
+          <div className="mx-auto max-w-6xl ">
+            <div className="">
+              <h2 className="font-cabinet font-extrabold text-center text-5xl">
+                Become a member of the best <br />
+                creative community
+              </h2>
+            </div>
+            <div className="">
+              <PriceCard />
+            </div>
+          </div>
+        </section>
+        {/* END Fifth Section */}
       </main>
     </>
   );
