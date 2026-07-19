@@ -4,7 +4,6 @@ const CreatorCard = ({ images, userData }) => {
   return (
     <>
       {userData.slice(0, 4).map((item, i) => {
-        // console.log("i:", i);
         // console.log(images[i]?.download_url);
         return (
           <div

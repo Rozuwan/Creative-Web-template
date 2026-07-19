@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { RiTwitterXLine } from "react-icons/ri";
 import NavLogo from "./NavLogo";
-import NavigateBtn from "./NavigateBtn";
+import NavigateBtn from "./button/NavigateBtn";
 const Signin = () => {
   return (
     <>
