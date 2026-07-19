@@ -2,8 +2,9 @@ import Navbar from "../components/Navbar";
 import HeroImg from "../assets/hero.png";
 import Communitybtn from "../components/button/Communitybtn";
 import { Link } from "react-router-dom";
-import { usePicsum } from "../context/PiscumContext";
 import Card from "../components/Card";
+// context
+import { usePicsum } from "../context/PiscumContext";
 
 // hero section stats
 const stats = [
@@ -22,9 +23,9 @@ const btnData = [
 ];
 
 const Homepage = () => {
+  // Context
   const { images, loading, error } = usePicsum();
-  if (loading) return <h1>Loading...</h1>;
-  if (error) return <h1>{error}</h1>;
+
   return (
     <>
       <Navbar />
@@ -104,7 +105,7 @@ const Homepage = () => {
           <div className="mx-auto max-w-6xl  ">
             <h2 className="text-5xl font-bold">Latest Inspiration</h2>
 
-            {/* button row: wrap on mobile, left-align */}
+            {/* button*/}
             <div className="flex flex-wrap justify-center gap-2 mt-18 md:justify-start">
               {btnData.map(({ data, span }) => {
                 return (
@@ -123,7 +124,7 @@ const Homepage = () => {
 
             {/* grid images */}
             <div className="relative">
-              {/* 1 col mobile, 2 cols tablet, 3 cols desktop */}
+              
               <div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {loading ? (
                   <div className="col-span-3 flex items-center justify-center py-20">
@@ -143,19 +144,22 @@ const Homepage = () => {
               {/* Bottom Fade */}
               <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-white via-white/70 to-transparent pointer-events-none" />
 
-              {/* Desktop floating button — hidden on mobile/tablet */}
+             
               <div className="hidden lg:block absolute top-180 right-120 -translate-y-3">
                 <Communitybtn />
               </div>
             </div>
 
-            {/* Mobile/tablet inline button — hidden on desktop */}
             <div className="flex justify-center lg:hidden mt-6">
               <Communitybtn />
             </div>
           </div>
         </section>
         {/*END Second layout */}
+
+        {/* Third Section */}
+                
+        {/* END Third Section */}
       </main>
     </>
   );
