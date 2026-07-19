@@ -28,61 +28,61 @@ const btnData = [
 const userData = [
   {
     name: "Emma Wilson",
-    title: "UI/UX Designer",
+    title: "@emmawilson",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
   },
   {
     name: "James Carter",
-    title: "Frontend Developer",
+    title: "@jamescarter",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
   },
   {
     name: "Sophia Brown",
-    title: "Product Designer",
+    title: "@sophiabrown",
     image:
       "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
   },
   {
     name: "Michael Lee",
-    title: "Software Engineer",
+    title: "@michaellee",
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
   {
     name: "Olivia Martin",
-    title: "Marketing Lead",
+    title: "@oliviamartin",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
   },
   {
     name: "Daniel Walker",
-    title: "Backend Developer",
+    title: "@danielwalker",
     image:
       "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=800&q=80",
   },
   {
     name: "Ava Johnson",
-    title: "Content Creator",
+    title: "@avajohnson",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
   },
   {
     name: "Ethan Harris",
-    title: "DevOps Engineer",
+    title: "@ethanharris",
     image:
       "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800&q=80",
   },
   {
     name: "Mia Thompson",
-    title: "Community Manager",
+    title: "@miathompson",
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80",
   },
   {
     name: "Noah Anderson",
-    title: "Full Stack Developer",
+    title: "@noahanderson",
     image:
       "https://images.unsplash.com/photo-1641260774125-04d527b376a5?q=80&w=710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -123,7 +123,7 @@ const Homepage = () => {
                 .
               </h1>
 
-              <p className="max-w-xl text-base text-text-primary md:text-xl">
+              <p className="max-w-155 text-base text-text-primary md:text-xl ">
                 Our landing page template works on all devices, so you only have
                 to set it up once, and get beautiful results forever.
               </p>
