@@ -16,7 +16,7 @@
 }
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Thin.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Extralight.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Extralight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Light.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Regular.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Medium.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Bold.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Extrabold.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Extrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -72,7 +72,7 @@
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("./assets/fonts/CabinetGrotesk-Black.woff2") format("woff2");
+  src: url("./assets/fonts/CabinetGrotesk-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -80,4 +80,36 @@
 
 @theme {
   --font-cabinet: "Cabinet Grotesk", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.mySwiper {
+  width: 100%;
+  padding: 20px 0 70px;
+}
+
+.mySwiper .swiper-wrapper {
+  align-items: center;
+}
+
+.mySwiper .swiper-pagination {
+  position: static;
+  margin-top: 5px;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 9999px;
+  background: #2563eb;
 }
