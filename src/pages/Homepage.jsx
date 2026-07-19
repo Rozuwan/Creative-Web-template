@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import HeroImg from "../assets/hero.png";
+import cardimg from "../assets/fourthSectionCard.jpg";
 import Communitybtn from "../components/button/Communitybtn";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
@@ -8,6 +9,7 @@ import { usePicsum } from "../context/PiscumContext";
 // swiper
 import "swiper/css";
 import TrendingCollectionSlider from "../components/TrendingCollectionSlider";
+import CreatorCard from "../components/CreatorCard";
 
 // hero section stats
 const stats = [
@@ -229,6 +231,48 @@ const Homepage = () => {
           </div>
         </section>
         {/* END Third Section */}
+
+        {/* Fourth Section */}
+        <section className="px-10 py-18">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="font-cabinet text-[42px] text-bg-primary sm:text-4xl lg:text-5xl font-extrabold text-center leading-tight ">
+              Join over 2M creatives from around <br />
+              the world
+            </h2>
+            <div className="mt-15 grid lg:grid-cols-2 gap-16 items-center">
+              {/* LEFT */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+                {/* Card 1 */}
+                <CreatorCard userData={userData} images={images} />
+              </div>
+
+              {/* RIGHT */}
+              <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+                <img
+                  src={cardimg}
+                  alt="Creative Community"
+                  className="object-fill bg-amber-500 "
+                />
+
+                <div className="mt-5">
+                  <h2 className="mt-15 font-cabinet text-4xl font-extrabold leading-tight">
+                    More than a community
+                  </h2>
+
+                  <p className="mt-5 mb-8 max-w-md text-xl leading-relaxed text-bg-primary font-normal">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content of a page when looking.
+                  </p>
+
+                  <div className="flex justify-center lg:justify-start">
+                    <Communitybtn />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* END Fourth Section */}
       </main>
     </>
   );
