@@ -1,12 +1,7 @@
 import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import NavLogo from "./NavLogo";
-import { usePicsum } from "../context/PiscumContext";
-
+import NavLogo from "../components/NavLogo";
 const Signup = () => {
-  const { images, loading, error } = usePicsum();
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
 
   return (
     <>
@@ -22,7 +17,7 @@ const Signup = () => {
       {/* profile */}
       <div className="h-15 w-15 overflow-hidden rounded-full mx-auto mb-3">
         <img
-          src={images[0].download_url}
+          src="https://preview.cruip.com/creative/images/join-avatar.jpg"
           className="h-full w-full object-cover"
         />
       </div>

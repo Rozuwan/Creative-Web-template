@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import HeroImg from "../assets/hero.png";
 import cardimg from "../assets/fourthSectionCard.jpg";
 import Communitybtn from "../components/button/Communitybtn";
@@ -6,21 +7,19 @@ import { Link } from "react-router-dom";
 import Card from "../components/Card";
 // context
 import { usePicsum } from "../context/PiscumContext";
-// swiper
+// swipercss
 import "swiper/css";
 import TrendingCollectionSlider from "../components/TrendingCollectionSlider";
 import CreatorCard from "../components/CreatorCard";
 import PriceCard from "../components/PriceCard";
 import UserSlider from "../components/UserSlider";
 
-// hero section stats
 const stats = [
   { value: "27M", label: "Inspiration" },
   { value: "14K", label: "Creators" },
   { value: "8K", label: "Projects" },
 ];
 
-// second section section btn data
 const btnData = [
   { data: "View All", span: "2.7k" },
   { data: "Illustration", span: "1.2k" },
@@ -28,7 +27,7 @@ const btnData = [
   { data: "Product Design", span: "1.7k" },
   { data: "Typography", span: "989" },
 ];
-// Third Section (user data with photo)
+
 const userData = [
   {
     name: "Emma Wilson",
@@ -111,8 +110,8 @@ const userData = [
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
 ];
+
 const Homepage = () => {
-  // Context
   const { images, loading, error } = usePicsum();
 
   return (
@@ -120,16 +119,14 @@ const Homepage = () => {
       <Navbar />
 
       <main className="overflow-x-hidden">
-        {/* Hero Section */}
+        {/* First Section */}
         <section className="rounded-bl-[80px]  bg-gray-50 px-10 py-18 overflow-hidden">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
-            {/* Left content */}
             <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left ">
               <h1 className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold">
                 The platform for creative{" "}
                 <span className="relative inline-block text-primary">
                   minds
-                  {/* UnderLine below minds! */}
                   <svg
                     className="absolute -bottom-0.5 -left-2 "
                     viewBox="0 0 100 12"
@@ -174,7 +171,6 @@ const Homepage = () => {
               </div>
             </div>
 
-            {/* Right content */}
             <div className=" flex basis-full justify-center md:basis-2/5 md:justify-end">
               <img
                 src={HeroImg}
@@ -184,8 +180,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/* End Hero section */}
-
+        {/* END First Section */}
         {/* Second Section */}
         <section className="px-10 py-18">
           <div className="mx-auto max-w-6xl  ">
@@ -193,7 +188,6 @@ const Homepage = () => {
               Latest inspiration
             </h2>
 
-            {/* button*/}
             <div className="flex flex-wrap justify-center gap-2 mt-12 md:justify-start">
               {btnData.map(({ data, span }) => {
                 return (
@@ -210,7 +204,6 @@ const Homepage = () => {
               })}
             </div>
 
-            {/* grid images */}
             <div className="relative">
               <div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {loading ? (
@@ -228,7 +221,6 @@ const Homepage = () => {
                 )}
               </div>
 
-              {/* Bottom Fade */}
               <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-white via-white/70 to-transparent pointer-events-none" />
 
               <div className="hidden lg:block absolute top-180 right-120 -translate-y-3">
@@ -241,8 +233,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/*END Second section */}
-
+        {/* END Second Section */}
         {/* Third Section */}
         <section className="px-10 py-18 bg-bg-secondary">
           <div className="mx-auto max-w-6xl  ">
@@ -253,7 +244,6 @@ const Homepage = () => {
           </div>
         </section>
         {/* END Third Section */}
-
         {/* Fourth Section */}
         <section className="px-10 py-18">
           <div className="mx-auto max-w-6xl">
@@ -262,13 +252,10 @@ const Homepage = () => {
               the world
             </h2>
             <div className="mt-15 grid lg:grid-cols-2 gap-16 items-center">
-              {/* LEFT */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-                {/* Card 1 */}
                 <CreatorCard userData={userData} images={images} />
               </div>
 
-              {/* RIGHT */}
               <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <img
                   src={cardimg}
@@ -294,8 +281,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/* END Fourth Section */}
-
+        {/* End Fourth Section */}
         {/* Fifth Section */}
         <section className="px-10 py-18 h-[70%] bg-gray-50">
           <div className="mx-auto max-w-6xl flex flex-col gap-15 ">
@@ -310,22 +296,22 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/* END Fifth Section */}
-
+        {/* End Fifth Section */}
         {/* Sixth Section */}
         <section className="relative px-10 ">
           <div className="mx-auto max-w-6xl flex flex-col gap-15 ">
-            {/* Bg*/}
             <div className="absolute left-1/2 top-50 h-70 w-[75%] max-w-6xl translate-x-[-55%] -translate-y-1/2 rotate-2 bg-gray-200 -z-10 "></div>
 
-            {/* Swiper */}
             <div className="relative mx-auto max-w-7xl">
               <UserSlider userData={userData} />
             </div>
           </div>
         </section>
         {/* END Sixth Section */}
+        
       </main>
+
+      <Footer />
     </>
   );
 };

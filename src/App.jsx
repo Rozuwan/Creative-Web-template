@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import Signin from "./components/Signin";
-import Signup from "./components/Signup";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 import { PicsumProvider } from "./context/PiscumContext";
 
 const App = () => {
