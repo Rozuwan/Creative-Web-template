@@ -113,3 +113,12 @@ body {
   border-radius: 9999px;
   background: #2563eb;
 }
+/* User card sixth section swiper css */
+
+.UserCardSwiper .swiper-pagination {
+    position: absolute !important;
+    left: unset !important;
+    right: 19% !important;
+    top: 65% !important;
+    width: fit-content !important;
+}

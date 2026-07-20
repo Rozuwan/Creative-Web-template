@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PriceCard = () => {
   const [billing, setBilling] = useState("yearly");
 
   return (
-    <section className="max-w-6xl mx-auto py-20 px-6">
-      {/* Toggle */}
-      <div className="flex justify-center mb-16">
+    <div className="max-w-4xl mx-auto  px-6">
+      {/* Toggle btn */}
+      <div className="flex justify-center mb-20 text-sm  font-sans font-medium">
         <div className="flex bg-gray-200 rounded-full p-1">
           <button
             onClick={() => setBilling("yearly")}
-            className={`px-8 py-3 rounded-full font-semibold transition ${
+            className={`px-5 py-1 rounded-full  transition ${
               billing === "yearly"
                 ? "bg-white shadow-md text-black"
                 : "text-gray-500"
@@ -22,7 +23,7 @@ const PriceCard = () => {
 
           <button
             onClick={() => setBilling("monthly")}
-            className={`px-8 py-3 rounded-full font-semibold transition ${
+            className={`px-5 py-1 rounded-full  transition ${
               billing === "monthly"
                 ? "bg-white shadow-md text-black"
                 : "text-gray-500"
@@ -36,22 +37,22 @@ const PriceCard = () => {
       {/* Cards */}
       <div className="grid lg:grid-cols-2 gap-10">
         {/* Starter */}
-        <div className="rounded-3xl p-10 border border-gray-200 bg-white">
-          <h3 className="text-3xl font-bold mb-2">Starter</h3>
+        <div className="rounded-2xl p-5 border border-gray-200 bg-white">
+          <h3 className="text-xl font-semibold font-cabinet mb-2">Starter</h3>
 
-          <h1 className="text-6xl font-bold mb-5">Free</h1>
+          <h1 className="text-5xl font-cabinet font-bold mb-5">Free</h1>
 
           <p className="text-gray-500 mb-8">
             Explore the tool, save inspiration and create collections.
           </p>
+          <Link to="/signup">
+            <button className="w-full bg-blue-500 text-white py-3 rounded-full font-semibold hover:bg-blue-600 transition">
+              Join The Community
+            </button>
+          </Link>
+          <h4 className="font-semibold mt-6 mb-5">Features include:</h4>
 
-          <button className="w-full bg-blue-500 text-white py-4 rounded-full font-semibold hover:bg-blue-600 transition">
-            Join The Community
-          </button>
-
-          <h4 className="font-semibold mt-10 mb-5">Features include:</h4>
-
-          <div className="space-y-4">
+          <div className="space-y-2">
             {[
               "Unlimited placeholder texts",
               "Consectetur adipiscing elit",
@@ -67,16 +68,20 @@ const PriceCard = () => {
         </div>
 
         {/* Business */}
-        <div className="relative rounded-3xl p-10 bg-slate-900 text-white">
-          <span className="absolute -top-4 right-8 bg-green-300 text-green-900 px-5 py-2 rounded-full font-semibold">
+        <div className="relative rounded-2xl p-5 bg-bg-primary text-white">
+          <span className="absolute -top-4 right-8 bg-green-300 text-green-900 px-3 py-1 rounded-full font-semibold">
             Most Popular
           </span>
 
-          <h3 className="text-3xl font-bold mb-2">Business</h3>
+          <h3 className="text-xl font-semibold font-cabinet mb-2">Business</h3>
 
           <div className="flex items-end gap-1 mb-5">
-            <span className="text-6xl font-bold">
-              ${billing === "yearly" ? 29 : 35}
+            <span className="text-gray-400 mb-1 font-medium text-3xl font-cabinet">
+              {" "}
+              $
+            </span>
+            <span className="text-5xl font-cabinet font-bold">
+              {billing === "yearly" ? 29 : 35}
             </span>
 
             <span className="text-gray-400 mb-2">/mo</span>
@@ -85,14 +90,14 @@ const PriceCard = () => {
           <p className="text-gray-400 mb-8">
             Get unlimited access to our new mood boarding tool.
           </p>
+          <Link to="/signup">
+            <button className="w-full bg-blue-500 text-white py-3  rounded-full font-semibold hover:bg-blue-600 transition">
+              Start Free Trial
+            </button>
+          </Link>
+          <h4 className="font-semibold mt-6 mb-5">All free features, plus:</h4>
 
-          <button className="w-full bg-blue-500 text-white py-4 rounded-full font-semibold hover:bg-blue-600 transition">
-            Start Free Trial
-          </button>
-
-          <h4 className="font-semibold mt-10 mb-5">All free features, plus:</h4>
-
-          <div className="space-y-4">
+          <div className="space-y-2">
             {[
               "Unlimited placeholder texts",
               "Consectetur adipiscing elit",
@@ -108,7 +113,7 @@ const PriceCard = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -11,6 +11,7 @@ import "swiper/css";
 import TrendingCollectionSlider from "../components/TrendingCollectionSlider";
 import CreatorCard from "../components/CreatorCard";
 import PriceCard from "../components/PriceCard";
+import UserSlider from "../components/UserSlider";
 
 // hero section stats
 const stats = [
@@ -32,62 +33,82 @@ const userData = [
   {
     name: "Emma Wilson",
     title: "@emmawilson",
+    quote:
+      "I've been Using Community CLub to track my ideas, and it's such a helpful and enjoyable product.Thanks for building it!",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
   },
   {
     name: "James Carter",
     title: "@jamescarter",
+    quote:
+      "If you want real marketing that works and effective implementation - communtiy Club's got you covered.",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
   },
   {
     name: "Sophia Brown",
     title: "@sophiabrown",
-    image:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
-  },
-  {
-    name: "Michael Lee",
-    title: "@michaellee",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
-  },
-  {
-    name: "Olivia Martin",
-    title: "@oliviamartin",
+    quote:
+      "Community Club has really helped our business in many different ways. I just can't get enough of this awesome company. ",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
   },
   {
-    name: "Daniel Walker",
-    title: "@danielwalker",
+    name: "Liam Anderson",
+    title: "@liamanderson",
+    quote:
+      "The clean design and smooth experience make collaboration so much easier. It's exactly what our team needed.",
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
+  },
+  {
+    name: "Olivia Taylor",
+    title: "@oliviataylor",
+    quote:
+      "I've tried dozens of productivity tools, but this is the first one that actually fits naturally into my workflow.",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+  },
+  {
+    name: "Noah Martinez",
+    title: "@noahmartinez",
+    quote:
+      "Everything feels polished and intuitive. Whether I'm planning a project or saving inspiration, it's always reliable.",
     image:
       "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=800&q=80",
   },
   {
     name: "Ava Johnson",
     title: "@avajohnson",
+    quote:
+      "The experience is smooth from start to finish. It helps me stay creative without getting distracted by unnecessary complexity.",
     image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
   },
   {
-    name: "Ethan Harris",
-    title: "@ethanharris",
+    name: "William Davis",
+    title: "@williamdavis",
+    quote:
+      "Our team adopted it in just a few days, and productivity noticeably improved. Simple tools really do make the biggest difference.",
     image:
       "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800&q=80",
   },
   {
-    name: "Mia Thompson",
-    title: "@miathompson",
+    name: "Mia Thomas",
+    title: "@miathomas",
+    quote:
+      "It's rare to find software that's both powerful and enjoyable. This has become one of my favorite tools to use.",
     image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
   },
   {
-    name: "Noah Anderson",
-    title: "@noahanderson",
+    name: "Ethan Harris",
+    title: "@ethanharris",
+    quote:
+      "Every update keeps getting better. The thoughtful design and attention to detail make it stand out from the competition.",
     image:
-      "https://images.unsplash.com/photo-1641260774125-04d527b376a5?q=80&w=710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
 ];
 const Homepage = () => {
@@ -276,8 +297,8 @@ const Homepage = () => {
         {/* END Fourth Section */}
 
         {/* Fifth Section */}
-        <section className="px-10 py-18 bg-gray-50">
-          <div className="mx-auto max-w-6xl ">
+        <section className="px-10 py-18 h-[70%] bg-gray-50">
+          <div className="mx-auto max-w-6xl flex flex-col gap-15 ">
             <div className="">
               <h2 className="font-cabinet font-extrabold text-center text-5xl">
                 Become a member of the best <br />
@@ -290,6 +311,20 @@ const Homepage = () => {
           </div>
         </section>
         {/* END Fifth Section */}
+
+        {/* Sixth Section */}
+        <section className="relative px-10 ">
+          <div className="mx-auto max-w-6xl flex flex-col gap-15 ">
+            {/* Bg*/}
+            <div className="absolute left-1/2 top-50 h-70 w-[75%] max-w-6xl translate-x-[-55%] -translate-y-1/2 rotate-2 bg-gray-200 -z-10 "></div>
+
+            {/* Swiper */}
+            <div className="relative mx-auto max-w-7xl">
+              <UserSlider userData={userData} />
+            </div>
+          </div>
+        </section>
+        {/* END Sixth Section */}
       </main>
     </>
   );
