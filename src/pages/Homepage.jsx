@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import HeroImg from "../assets/hero.png";
 import cardimg from "../assets/fourthSectionCard.jpg";
 import Communitybtn from "../components/button/Communitybtn";
@@ -163,7 +162,7 @@ const Homepage = () => {
                 {stats.map(({ value, label }) => (
                   <div key={label}>
                     <h3 className="text-2xl font-bold">{value}</h3>
-                    <p className="text-base font-normal text-gray-500">
+                    <p className="text-base font-normabasetextprima5ytext-text-primary">
                       {label}
                     </p>
                   </div>
@@ -211,7 +210,7 @@ const Homepage = () => {
                     Loading...
                   </div>
                 ) : error ? (
-                  <div className="col-span-3 flex items-center justify-center py-20 text-red-500">
+                  <div className="col-span-3 flex items-center justify-center py-base texprima5ytext-text-primary">
                     {error}
                   </div>
                 ) : (
@@ -308,10 +307,84 @@ const Homepage = () => {
           </div>
         </section>
         {/* END Sixth Section */}
-        
-      </main>
+        {/* Sevent Section */}
+        <section className="px-10 py-18">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="mb-16 text-5xl font-cabinet font-extrabold text-bg-primary">
+              Questions and answers
+            </h2>
 
-      <Footer />
+            <div className="grid gap-x-16 gap-y-12 md:grid-cols-2">
+              <div>
+                <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
+                  What is the difference between the Free and Paid versions?
+                </h3>
+                <p className="text-base leading-5 text-text-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
+                  Do I need coding knowledge to use this product?
+                </h3>
+                <p className="text-base leading-5 text-text-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
+                  Do you have student or non-profit discounts?
+                </h3>
+                <p className="text-base leading-5 text-text-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
+                  Is there a way to become an Affiliate reseller?
+                </h3>
+                <p className="text-base leading-5 text-text-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
+                  How is the price determined?
+                </h3>
+                <p className="text-base leading-5 text-text-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
+                  What forms of payment do you accept?
+                </h3>
+                <p className="text-base leading-5 text-text-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* END Sevent Section */}
+      </main>
     </>
   );
 };
