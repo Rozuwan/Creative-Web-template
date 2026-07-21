@@ -302,15 +302,15 @@ const Homepage = ({ userData }) => {
         </section>
         {/* END Sevent Section */}
         {/* Eighth Section */}
-        <section className="px-10 py-18">
+        <section className="px-4 sm:px-6 lg:px-10 py-18">
           <div className="mx-auto max-w-6xl">
-            <div className="flex justify-between">
-              <h2 className="text-5xl font-extrabold font-cabinet ">
+            <div className="flex flex-col items-center sm:flex-row sm:justify-between">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-cabinet text-center sm:text-left">
                 From Our Blog
               </h2>
               <Link
                 to="/blog"
-                className="text-primary hover:underline hover:decoration-1"
+                className="text-primary hover:underline hover:decoration-1 mt-2 sm:mt-0"
               >
                 View all posts
               </Link>

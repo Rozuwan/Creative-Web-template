@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const BlogCard = ({ item, image }) => {
   return (
     <>
-      <div className="group flex flex-col py-10 ">
+      <Link to={`/blog/${item.slug}`} className="group flex flex-col py-6 sm:py-10">
         {/* Image */}
         <div className="overflow-hidden">
           <img
@@ -13,7 +15,7 @@ const BlogCard = ({ item, image }) => {
 
         {/* Content */}
         <div className="mt-8 flex flex-col gap-5">
-          <h3 className="font-cabinet text-2xl leading-[1.2] font-bold tracking-tight text-bg-primary hover:underline hover:decoration-2 hover:decoration-primary w-80">
+          <h3 className="font-cabinet text-2xl leading-[1.2] font-bold tracking-tight text-bg-primary hover:underline hover:decoration-2 hover:decoration-primary max-w-80">
             {item.blogTitle}
           </h3>
 
@@ -31,11 +33,13 @@ const BlogCard = ({ item, image }) => {
 
             <p className="text-sm text-text-primary font-sans">
               By{" "}
-              <span className="font-sm font-medium text-black font-sans hover:underline hover:decoration-2 hover:decoration-primary">{item.name}</span>
+              <span className="font-sm font-medium text-black font-sans hover:underline hover:decoration-2 hover:decoration-primary">
+                {item.name}
+              </span>
             </p>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

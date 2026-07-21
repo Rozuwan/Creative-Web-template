@@ -4,9 +4,11 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { PicsumProvider } from "./context/PiscumContext";
 import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
 
 const userData = [
   {
+    slug: "concept-art-illustrations",
     name: "Emma Wilson",
     title: "@emmawilson",
     blogTitle: "Concept Art & Illustrations by Stef Euphoria",
@@ -18,6 +20,7 @@ const userData = [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
   },
   {
+    slug: "patrick-chen-branding",
     name: "James Carter",
     title: "@jamescarter",
     blogTitle: "Patrick Chen's Branding by Thought & Found Studio",
@@ -29,6 +32,7 @@ const userData = [
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
   },
   {
+    slug: "soma-brewing-branding",
     name: "Sophia Brown",
     title: "@sophiabrown",
     blogTitle: "Soma Brewing Branding & Packaging by Quim Martin",
@@ -40,6 +44,7 @@ const userData = [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
   },
   {
+    slug: "creating-minimal-interfaces",
     name: "Liam Anderson",
     title: "@liamanderson",
     blogTitle: "Creating Minimal Interfaces That Feel Effortless",
@@ -51,17 +56,19 @@ const userData = [
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
   {
+    slug: "building-brands-that-people-remember",
     name: "Olivia Taylor",
     title: "@oliviataylor",
     blogTitle: "Building Brands That People Remember",
     blogDescription:
       "A practical guide to creating memorable visual identities that remain consistent across digital and print platforms.",
     quote:
-      "I've tried dozens of productivity tools, but this is the first one that actually fits naturally into my workflow.",
+      "A practical guide to creating memorable visual identities that remain consistent across digital and print platforms.",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
   },
   {
+    slug: "great-design-improves-user-engagement",
     name: "Noah Martinez",
     title: "@noahmartinez",
     blogTitle: "How Great Design Improves User Engagement",
@@ -73,17 +80,19 @@ const userData = [
       "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=800&q=80",
   },
   {
+    slug: "modern-web-design-trends",
     name: "Ava Johnson",
     title: "@avajohnson",
     blogTitle: "Modern Web Design Trends Worth Following",
     blogDescription:
-      "Explore emerging UI trends that balance aesthetics, performance, and usability for modern websites.",
+      "Explore emerging UI trends that balance aesthetics, performance, and usability for modern websites and more.",
     quote:
-      "The experience is smooth from start to finish. It helps me stay creative without getting distracted by unnecessary complexity.",
+      "A practical guide to creating memorable visual identities that remain consistent across digital and print platforms.",
     image:
       "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
   },
   {
+    slug: "power-of-design-systems",
     name: "William Davis",
     title: "@williamdavis",
     blogTitle: "The Power of Consistent Design Systems",
@@ -95,6 +104,7 @@ const userData = [
       "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800&q=80",
   },
   {
+    slug: "storytelling-in-design",
     name: "Mia Thomas",
     title: "@miathomas",
     blogTitle: "Designing Better Experiences Through Storytelling",
@@ -106,6 +116,7 @@ const userData = [
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
   },
   {
+    slug: "creative-inspiration-worldwide",
     name: "Ethan Harris",
     title: "@ethanharris",
     blogTitle: "Creative Inspiration From Around the World",
@@ -127,6 +138,10 @@ const App = () => {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/blog" element={<BlogPage userData={userData} />} />
+          <Route
+            path="/blog/:slug"
+            element={<BlogPost userData={userData} />}
+          />
         </Routes>
       </PicsumProvider>
     </div>
