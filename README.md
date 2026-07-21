@@ -4,7 +4,7 @@ A frontend clone of the [Creative landing page](https://preview.cruip.com/creati
 
 ## Live Preview
 
-*(Coming soon)*
+[LIVE PREVIEW](https://creative-steel.vercel.app/)
 
 ## Landing page
 
