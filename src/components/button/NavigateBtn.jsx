@@ -7,9 +7,9 @@ const NavigateBtn = () => {
   return (
     <button
       onClick={() => navigate(-1)}
-      className="cursor-pointer text-text-primary transition hover:text-primary flex items-center gap-1"
+      className="cursor-pointer text-text-primary transition hover:text-primary flex items-center gap-1 font-inter"
     >
-      <FaArrowLeft className="size-5" /> <span>back</span>
+      <FaArrowLeft className="size-5" /> <span className="font-inter">back</span>
     </button>
   );
 };

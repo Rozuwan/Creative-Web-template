@@ -14,12 +14,12 @@ const PrivacyPage = () => {
           </h1>
 
           {/* Last Updated */}
-          <p className="mt-6 font-sans text-[18px] font-normal text-text-primary">
+          <p className="mt-6 font-inter text-[18px] font-normal text-text-primary">
             Last updated July 3, 2026
           </p>
 
           {/* Intro */}
-          <p className="mt-12 font-sans text-[18px] font-normal leading-9 text-text-primary">
+          <p className="mt-12 font-inter text-[18px] font-normal leading-9 text-text-primary">
             This Privacy Policy explains how Creative ("we", "us") collects,
             uses, and shares information about you when you use our website,
             products, and services (collectively, the "Services"). We are
@@ -33,7 +33,7 @@ const PrivacyPage = () => {
               1. Information we collect
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We collect information you provide directly, such as your name,
               email address, and any other details you submit through forms or
               when creating an account. We also collect usage data
@@ -48,11 +48,11 @@ const PrivacyPage = () => {
               2. How we use information
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We use the information we collect to:
             </p>
 
-            <ul className="mt-5 list-disc space-y-4 pl-8 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <ul className="mt-5 list-disc space-y-4 pl-8 font-inter text-[18px] font-normal leading-9 text-text-primary">
               <li>Provide, maintain, and improve the Services.</li>
               <li>Respond to your requests and provide customer support.</li>
               <li>
@@ -70,7 +70,7 @@ const PrivacyPage = () => {
               3. Sharing of information
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We do not sell your personal information. We share information
               only with trusted service providers who process data on our
               behalf, when required by law, or in connection with a merger or
@@ -84,7 +84,7 @@ const PrivacyPage = () => {
               4. Cookies
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We use cookies and similar tracking technologies to remember your
               preferences and understand how you interact with our Services. You
               can set your browser to refuse cookies, though some features may
@@ -98,7 +98,7 @@ const PrivacyPage = () => {
               5. Data retention
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We retain your information for as long as your account is active
               or as needed to provide the Services. We will delete or anonymize
               your information when it is no longer required unless we are
@@ -112,11 +112,11 @@ const PrivacyPage = () => {
               6. Your rights
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               Depending on your location, you may have the right to access,
               correct, or delete your personal information, or to object to
               certain processing. To exercise these rights, please{" "}
-              <Link to='/contact' className="text-primary hover:underline">
+               <Link to='/contact' className="text-primary hover:underline font-inter">
                 contact us.
               </Link>
             </p>
@@ -128,7 +128,7 @@ const PrivacyPage = () => {
               7. Security
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We use administrative, technical, and physical safeguards designed
               to protect your information. However, no method of transmission or
               storage is completely secure, and we cannot guarantee absolute
@@ -142,7 +142,7 @@ const PrivacyPage = () => {
               8. Changes to this policy
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               We may update this Privacy Policy from time to time. If we make
               material changes, we will update the date at the top of this page.
             </p>
@@ -154,9 +154,9 @@ const PrivacyPage = () => {
               9. Contact
             </h2>
 
-            <p className="mt-5 font-sans text-[18px] font-normal leading-9 text-text-primary">
+            <p className="mt-5 font-inter text-[18px] font-normal leading-9 text-text-primary">
               If you have any questions about this Privacy Policy, please{" "}
-              <Link to='/contact' className="text-primary hover:underline">
+               <Link to='/contact' className="text-primary hover:underline font-inter">
                 contact us.
               </Link>
             </p>

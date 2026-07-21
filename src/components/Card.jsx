@@ -19,14 +19,14 @@ const Card = ({ image }) => {
         <div className="flex items-center gap-3">
           {/* Author */}
           <div>
-            <h3 className="font-semibold text-white"></h3>
-            <p className="text-sm text-gray-300">{image.author}</p>
+            <h3 className="font-semibold text-white font-inter"></h3>
+            <p className="text-sm text-gray-300 font-inter">{image.author}</p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 text-white">
           <FaRegHeart className="text-xl text-red-500" />
-          <span className="font-medium">4K</span>
+          <span className="font-medium font-inter">4K</span>
         </div>
       </div>
     </div>

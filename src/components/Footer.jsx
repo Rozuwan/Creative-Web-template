@@ -19,12 +19,12 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your email"
-              className="h-10 w-full max-w-md border border-gray-200 px-5 text-sm outline-none sm:w-auto"
+              className="h-10 w-full max-w-md border border-gray-200 px-5 text-sm outline-none sm:w-auto font-inter"
             />
 
             <Link
               to="/signup"
-              className="flex h-10 w-full max-w-md items-center justify-center rounded-full bg-primary px-6 font-sans text-base font-semibold text-white active:scale-95 sm:w-auto"
+              className="flex h-10 w-full max-w-md items-center justify-center rounded-full bg-primary px-6 font-inter text-base font-semibold text-white active:scale-95 sm:w-auto"
             >
               Join Newsletter
             </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="order-2 flex justify-center gap-10 text-sm font-medium text-text-primary lg:order-1">
+          <div className="order-2 flex justify-center gap-10 text-sm font-medium text-text-primary font-inter lg:order-1">
             <Link
               to="/blog"
               className="hover:underline hover:decoration-2 hover:decoration-primary"
@@ -81,14 +81,14 @@ const Footer = () => {
         </div>
 
         {/* Footer Text */}
-        <p className="mx-auto mt-2 max-w-3xl text-center text-xs leading-6 text-slate-400 lg:mx-0 lg:w-[90%] lg:max-w-none lg:text-left">
+        <p className="mx-auto mt-2 max-w-3xl text-center text-xs leading-6 text-slate-400 lg:mx-0 lg:w-[90%] lg:max-w-none lg:text-left font-inter">
           Some of our posts may contain affiliate links to partner brands. We
           earn a small commission if you click the link and make a purchase.
           There is no extra cost to you, so it's just a nice way to help support
           the site. All images, videos, and other content posted on the site are
           attributed to their creators and original sources. If you see
           something wrong here or would like to have it removed, please{" "}
-          <Link to="/contact" className="text-primary hover:underline">
+          <Link to="/contact" className="text-primary hover:underline font-inter">
             contact us.
           </Link>
         </p>

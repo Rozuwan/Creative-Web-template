@@ -8,7 +8,7 @@ const PriceCard = () => {
   return (
     <div className="max-w-4xl mx-auto  px-6">
       {/* Toggle btn */}
-      <div className="flex justify-center mb-20 text-sm  font-sans font-medium">
+      <div className="flex justify-center mb-20 text-sm  font-inter font-medium">
         <div className="flex bg-gray-200 rounded-full p-1">
           <button
             onClick={() => setBilling("yearly")}
@@ -16,9 +16,9 @@ const PriceCard = () => {
               billing === "yearly"
                 ? "bg-white shadow-md text-black"
                 : "text-gray-500"
-            }`}
+            } font-inter`}
           >
-            Yearly <span className="text-green-500">-20%</span>
+            Yearly <span className="text-green-500 font-inter">-20%</span>
           </button>
 
           <button
@@ -27,7 +27,7 @@ const PriceCard = () => {
               billing === "monthly"
                 ? "bg-white shadow-md text-black"
                 : "text-gray-500"
-            }`}
+            } font-inter`}
           >
             Monthly
           </button>
@@ -42,15 +42,15 @@ const PriceCard = () => {
 
           <h1 className="text-5xl font-cabinet font-bold mb-5">Free</h1>
 
-          <p className="text-gray-500 mb-8">
+          <p className="text-gray-500 mb-8 font-inter">
             Explore the tool, save inspiration and create collections.
           </p>
           <Link to="/signup">
-            <button className="w-full bg-blue-500 text-white py-3 rounded-full font-semibold hover:bg-blue-600 transition">
+            <button className="w-full bg-blue-500 text-white py-3 rounded-full font-semibold hover:bg-blue-600 transition font-inter">
               Join The Community
             </button>
           </Link>
-          <h4 className="font-semibold mt-6 mb-5">Features include:</h4>
+          <h4 className="font-semibold mt-6 mb-5 font-inter">Features include:</h4>
 
           <div className="space-y-2">
             {[
@@ -61,7 +61,7 @@ const PriceCard = () => {
             ].map((item) => (
               <div key={item} className="flex items-center gap-3">
                 <Check size={18} className="text-green-500" />
-                <span className="text-gray-600">{item}</span>
+                <span className="text-gray-600 font-inter">{item}</span>
               </div>
             ))}
           </div>
@@ -69,7 +69,7 @@ const PriceCard = () => {
 
         {/* Business */}
         <div className="relative rounded-2xl p-5 bg-bg-primary text-white">
-          <span className="absolute -top-4 right-8 bg-green-300 text-green-900 px-3 py-1 rounded-full font-semibold">
+          <span className="absolute -top-4 right-8 bg-green-300 text-green-900 px-3 py-1 rounded-full font-semibold font-inter">
             Most Popular
           </span>
 
@@ -84,18 +84,18 @@ const PriceCard = () => {
               {billing === "yearly" ? 29 : 35}
             </span>
 
-            <span className="text-gray-400 mb-2">/mo</span>
+            <span className="text-gray-400 mb-2 font-inter">/mo</span>
           </div>
 
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-400 mb-8 font-inter">
             Get unlimited access to our new mood boarding tool.
           </p>
           <Link to="/signup">
-            <button className="w-full bg-blue-500 text-white py-3  rounded-full font-semibold hover:bg-blue-600 transition">
+            <button className="w-full bg-blue-500 text-white py-3  rounded-full font-semibold hover:bg-blue-600 transition font-inter">
               Start Free Trial
             </button>
           </Link>
-          <h4 className="font-semibold mt-6 mb-5">All free features, plus:</h4>
+          <h4 className="font-semibold mt-6 mb-5 font-inter">All free features, plus:</h4>
 
           <div className="space-y-2">
             {[
@@ -107,7 +107,7 @@ const PriceCard = () => {
             ].map((item) => (
               <div key={item} className="flex items-center gap-3">
                 <Check size={18} className="text-green-400" />
-                <span className="text-gray-300">{item}</span>
+                <span className="text-gray-300 font-inter">{item}</span>
               </div>
             ))}
           </div>

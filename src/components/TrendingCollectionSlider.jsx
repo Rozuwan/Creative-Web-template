@@ -47,11 +47,11 @@ export default function App({ images, userData }) {
                 />
 
                 <div>
-                  <h3 className="font-sans text-2xl font-bold text-white">
+                  <h3 className="font-inter text-2xl font-bold text-white">
                     {userData[i].name}
                   </h3>
 
-                  <p className="font-sans mt-1 text-sm text-white/80">
+                  <p className="font-inter mt-1 text-sm text-white/80">
                     {userData[i].title}
                   </p>
                 </div>

@@ -19,7 +19,7 @@ const BlogCard = ({ item, image }) => {
             {item.blogTitle}
           </h3>
 
-          <p className="text-base leading-5 text-text-primary">
+          <p className="text-base leading-5 text-text-primary font-inter">
             {item.blogDescription}
           </p>
 
@@ -31,9 +31,9 @@ const BlogCard = ({ item, image }) => {
               className="h-11 w-11 rounded-full object-cover"
             />
 
-            <p className="text-sm text-text-primary font-sans">
+            <p className="text-sm text-text-primary font-inter">
               By{" "}
-              <span className="font-sm font-medium text-black font-sans hover:underline hover:decoration-2 hover:decoration-primary">
+              <span className="font-sm font-medium text-black font-inter hover:underline hover:decoration-2 hover:decoration-primary">
                 {item.name}
               </span>
             </p>

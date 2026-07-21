@@ -26,9 +26,9 @@ const CreatorCard = ({ images, userData }) => {
 
               <h3 className="mt-4 text-xl font-bold font-cabinet hover:underline hover:decoration-2">{item.name}</h3>
 
-              <p className="text-text-primary font-medium">{item.title}</p>
+              <p className="text-text-primary font-medium font-inter">{item.title}</p>
 
-              <button className="mt-5 rounded-full bg-bg-primary font-medium px-4 py-2 text-white transition flex items-center gap-2">
+              <button className="mt-5 rounded-full bg-bg-primary font-medium px-4 py-2 text-white transition flex items-center gap-2 font-inter">
                 <FaPlus className="text-text-primary" />
                 Follow
               </button>

@@ -34,10 +34,10 @@ const BlogPost = ({ userData }) => {
             />
 
             <div className="min-w-0">
-              <p className="font-medium text-sm font-sans text-bg-primary">
+              <p className="font-medium text-sm font-inter text-bg-primary">
                 {blog.name}
               </p>
-              <p className="font-normal text-sm font-sans text-text-primary">
+              <p className="font-normal text-sm font-inter text-text-primary">
                 {blog.title}
               </p>
             </div>
@@ -52,7 +52,7 @@ const BlogPost = ({ userData }) => {
 
           {/* Description */}
           <p className="mt-6 text-base sm:text-lg lg:text-xl font-semibold font-cabinet leading-7 sm:leading-8 lg:leading-9 text-black">"{blog.quote}"</p>
-          <p className="text-base sm:text-lg leading-7 sm:leading-8 lg:leading-9 font-sans text-slate-600">
+          <p className="text-base sm:text-lg leading-7 sm:leading-8 lg:leading-9 font-inter text-slate-600">
             {blog.blogDescription}
           </p>
         </div>

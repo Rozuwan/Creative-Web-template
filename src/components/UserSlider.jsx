@@ -43,8 +43,8 @@ const UserSlider = ({ userData }) => {
                 {user.quote}
               </h2>
 
-              <button className="group mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600">
-                <span>Read Story</span>
+              <button className="group mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600 font-inter">
+                <span className="font-inter">Read Story</span>
 
                 <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>

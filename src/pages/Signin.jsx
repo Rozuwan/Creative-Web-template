@@ -27,7 +27,7 @@ const Signin = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-semibold text-text-primary"
+                  className="mb-2 block text-sm font-semibold text-text-primary font-inter"
                 >
                   Email
                 </label>
@@ -37,7 +37,7 @@ const Signin = () => {
                   type="email"
                   placeholder="Enter your email"
                   required
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0 "
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0 font-inter"
                 />
               </div>
 
@@ -46,14 +46,14 @@ const Signin = () => {
                   <label
                     htmlFor="password"
                     required
-                    className="text-sm font-semibold text-text-primary"
+                    className="text-sm font-semibold text-text-primary font-inter"
                   >
                     Password
                   </label>
 
                   <button
                     type="button"
-                    className="text-sm text-primary hover:underline"
+                    className="text-sm text-primary hover:underline font-inter"
                   >
                     Forgot password?
                   </button>
@@ -63,23 +63,23 @@ const Signin = () => {
                   id="password"
                   type="password"
                   placeholder="Enter your password"
-                  className="w-full rounded-xl border px-4 py-3 transition border-gray-300  focus:outline-none focus:ring-0 "
+                  className="w-full rounded-xl border px-4 py-3 transition border-gray-300  focus:outline-none focus:ring-0 font-inter"
                 />
               </div>
 
               <div className="flex gap-4">
                 <Link
                   to="/signup"
-                  className="flex-1 rounded-xl text-primary py-3 text-center font-semibold hover:underline  "
+                  className="flex-1 rounded-xl text-primary py-3 text-center font-semibold hover:underline font-inter"
                 >
                   Join the Community
                 </Link>
 
-                <Link
-                  to="/signin"
-                  className="flex-1 bg-primary py-3 rounded-full text-center font-semibold text-white transition hover:bg-primary-light active:scale-95"
-                >
-                  <button>Sign In To Creative</button>
+                  <Link
+                    to="/signin"
+                    className="flex-1 bg-primary py-3 rounded-full text-center font-semibold text-white transition hover:bg-primary-light active:scale-95 font-inter"
+                  >
+                    <button className="font-inter">Sign In To Creative</button>
                 </Link>
               </div>
             </form>
@@ -87,14 +87,14 @@ const Signin = () => {
             <div className="my-8 flex items-center gap-4">
               <div className="h-px flex-1 bg-gray-300"></div>
 
-              <span className="text-md text-text-primary italic">or</span>
+              <span className="text-md text-text-primary italic font-inter">or</span>
 
               <div className="h-px flex-1 bg-gray-300"></div>
             </div>
 
-            <button className="w-full rounded-full py-2 px-5 flex items-center justify-center font-semibold transition relative bg-primary text-white -mt-3 cursor-pointer active:scale-95">
+            <button className="w-full rounded-full py-2 px-5 flex items-center justify-center font-semibold transition relative bg-primary text-white -mt-3 cursor-pointer active:scale-95 font-inter">
               <RiTwitterXLine className="absolute left-5 size-3em" />{" "}
-              <span>Join with Twitter</span>
+              <span className="font-inter">Join with Twitter</span>
             </button>
           </div>
         </div>

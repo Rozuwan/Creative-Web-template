@@ -33,9 +33,9 @@ const Signup = () => {
           <div>
             <label
               htmlFor="fullname"
-              className="mb-2 block text-sm font-semibold text-text-primary"
-            >
-              Full Name
+                className="mb-2 block text-sm font-semibold text-text-primary font-inter"
+              >
+                Full Name
             </label>
 
             <input
@@ -43,7 +43,7 @@ const Signup = () => {
               type="text"
               placeholder="Enter your full name"
               required
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0 font-inter"
             />
           </div>
 
@@ -51,9 +51,9 @@ const Signup = () => {
           <div>
             <label
               htmlFor="username"
-              className="mb-2 block text-sm font-semibold text-text-primary"
-            >
-              Username
+              className="mb-2 block text-sm font-semibold text-text-primary font-inter"
+              >
+                Username
             </label>
 
             <input
@@ -61,7 +61,7 @@ const Signup = () => {
               type="text"
               placeholder="Choose a username"
               required
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0 font-inter"
             />
           </div>
 
@@ -69,9 +69,9 @@ const Signup = () => {
           <div>
             <label
               htmlFor="email"
-              className="mb-2 block text-sm font-semibold text-text-primary"
-            >
-              Email
+              className="mb-2 block text-sm font-semibold text-text-primary font-inter"
+              >
+                Email
             </label>
 
             <input
@@ -79,7 +79,7 @@ const Signup = () => {
               type="email"
               placeholder="Enter your email"
               required
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0 font-inter"
             />
           </div>
 
@@ -87,9 +87,9 @@ const Signup = () => {
           <div>
             <label
               htmlFor="password"
-              className="mb-2 block text-sm font-semibold text-text-primary"
-            >
-              Password
+              className="mb-2 block text-sm font-semibold text-text-primary font-inter"
+              >
+                Password
             </label>
 
             <input
@@ -97,23 +97,23 @@ const Signup = () => {
               type="password"
               placeholder="Create a password"
               required
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-0 font-inter"
             />
           </div>
 
           <div className="flex gap-4">
             <Link
               to="/signin"
-              className="flex-1 py-3 text-center font-semibold text-primary hover:underline"
-            >
-              Go to Login
+              className="flex-1 py-3 text-center font-semibold text-primary hover:underline font-inter"
+              >
+                Go to Login
             </Link>
 
             <button
               type="submit"
-              className="flex-1 rounded-full bg-primary py-3 font-semibold text-white transition hover:bg-primary-light active:scale-95"
-            >
-              Create Account
+              className="flex-1 rounded-full bg-primary py-3 font-semibold text-white transition hover:bg-primary-light active:scale-95 font-inter"
+              >
+                Create Account
             </button>
           </div>
         </form>
@@ -121,14 +121,14 @@ const Signup = () => {
         <div className="my-8 flex items-center gap-4">
           <div className="h-px flex-1 bg-gray-300"></div>
 
-          <span className="text-md italic text-text-primary">or</span>
+          <span className="text-md italic text-text-primary font-inter">or</span>
 
           <div className="h-px flex-1 bg-gray-300"></div>
         </div>
 
-        <button className="relative -mt-3 flex w-full cursor-pointer items-center justify-center rounded-full bg-primary px-5 py-2 font-semibold text-white transition active:scale-95">
+        <button className="relative -mt-3 flex w-full cursor-pointer items-center justify-center rounded-full bg-primary px-5 py-2 font-semibold text-white transition active:scale-95 font-inter">
           <RiTwitterXLine className="absolute left-5 text-xl" />
-          <span>Sign Up with Twitter</span>
+          <span className="font-inter">Sign Up with Twitter</span>
         </button>
       </div>
     </div>

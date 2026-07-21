@@ -19,13 +19,13 @@ const NotFound = () => {
               Looks like you're lost
             </h1>
 
-            <p className="mx-auto mt-3 max-w-xl font-sans text-text-primary text-base text-bg-text-primary lg:text-lg">
+            <p className="mx-auto mt-3 max-w-xl font-inter text-text-primary text-base text-bg-text-primary lg:text-lg">
               The page you are looking for doesn't exist or may have been moved.
             </p>
 
             <Link
               to="/"
-              className="mt-7 inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-sans text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:opacity-90 active:scale-95"
+              className="mt-7 inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-inter text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:opacity-90 active:scale-95"
             >
               Go to Home
             </Link>

@@ -42,7 +42,7 @@ const Homepage = ({ userData }) => {
             <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left ">
               <h1 className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold">
                 The platform for creative{" "}
-                <span className="relative inline-block text-primary">
+                <span className="relative inline-block text-primary font-inter">
                   minds
                   <svg
                     className="absolute -bottom-0.5 -left-2 "
@@ -61,7 +61,7 @@ const Homepage = ({ userData }) => {
                 .
               </h1>
 
-              <p className="max-w-155 text-base text-text-primary md:text-xl ">
+              <p className="max-w-155 text-base text-text-primary md:text-xl font-inter">
                 Our landing page template works on all devices, so you only have
                 to set it up once, and get beautiful results forever.
               </p>
@@ -70,7 +70,7 @@ const Homepage = ({ userData }) => {
                 <Communitybtn />
                 <Link
                   to="/signin"
-                  className="inline-block rounded-full border border-gray-300 bg-white px-6 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95"
+                  className="inline-block rounded-full border border-gray-300 bg-white px-6 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95 font-inter"
                 >
                   Sign In
                 </Link>
@@ -79,8 +79,8 @@ const Homepage = ({ userData }) => {
               <div className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start">
                 {stats.map(({ value, label }) => (
                   <div key={label}>
-                    <h3 className="text-2xl font-bold">{value}</h3>
-                    <p className="text-base font-normabasetextprima5ytext-text-primary">
+                    <h3 className="text-2xl font-bold font-inter">{value}</h3>
+                    <p className="text-base font-inter font-normabasetextprima5ytext-text-primary">
                       {label}
                     </p>
                   </div>
@@ -110,10 +110,10 @@ const Homepage = ({ userData }) => {
                 return (
                   <button
                     key={data}
-                    className="px-2 py-1 border-2 border-text-secondary rounded-full text-base active:scale-95"
+                    className="px-2 py-1 border-2 border-text-secondary rounded-full text-base active:scale-95 font-inter"
                   >
                     {data}{" "}
-                    <span className="text-base bg-text-secondary rounded-full px-2 text-white">
+                    <span className="text-base bg-text-secondary rounded-full px-2 text-white font-inter">
                       {span}
                     </span>
                   </button>
@@ -185,7 +185,7 @@ const Homepage = ({ userData }) => {
                     More than a community
                   </h2>
 
-                  <p className="mt-5 mb-8 max-w-md text-xl leading-relaxed text-bg-primary font-normal">
+                  <p className="mt-5 mb-8 max-w-md text-xl leading-relaxed text-bg-primary font-normal font-inter">
                     It is a long established fact that a reader will be
                     distracted by the readable content of a page when looking.
                   </p>
@@ -237,7 +237,7 @@ const Homepage = ({ userData }) => {
                 <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
                   What is the difference between the Free and Paid versions?
                 </h3>
-                <p className="text-base leading-5 text-text-primary">
+                <p className="text-base leading-5 text-text-primary font-inter">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua,
                   ut enim ad minim veniam.
@@ -248,7 +248,7 @@ const Homepage = ({ userData }) => {
                 <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
                   Do I need coding knowledge to use this product?
                 </h3>
-                <p className="text-base leading-5 text-text-primary">
+                <p className="text-base leading-5 text-text-primary font-inter">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua,
                   ut enim ad minim veniam.
@@ -259,7 +259,7 @@ const Homepage = ({ userData }) => {
                 <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
                   Do you have student or non-profit discounts?
                 </h3>
-                <p className="text-base leading-5 text-text-primary">
+                <p className="text-base leading-5 text-text-primary font-inter">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua,
                   ut enim ad minim veniam.
@@ -270,7 +270,7 @@ const Homepage = ({ userData }) => {
                 <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
                   Is there a way to become an Affiliate reseller?
                 </h3>
-                <p className="text-base leading-5 text-text-primary">
+                <p className="text-base leading-5 text-text-primary font-inter">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua,
                   ut enim ad minim veniam.
@@ -281,7 +281,7 @@ const Homepage = ({ userData }) => {
                 <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
                   How is the price determined?
                 </h3>
-                <p className="text-base leading-5 text-text-primary">
+                <p className="text-base leading-5 text-text-primary font-inter">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua,
                   ut enim ad minim veniam.
@@ -292,7 +292,7 @@ const Homepage = ({ userData }) => {
                 <h3 className="mb-4 text-xl font-bold font-cabinet text-bg-primary">
                   What forms of payment do you accept?
                 </h3>
-                <p className="text-base leading-5 text-text-primary">
+                <p className="text-base leading-5 text-text-primary font-inter">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua,
                   ut enim ad minim veniam.
@@ -312,7 +312,7 @@ const Homepage = ({ userData }) => {
               </h2>
               <Link
                 to="/blog"
-                className="text-primary hover:underline hover:decoration-1 mt-2 sm:mt-0"
+                className="text-primary hover:underline hover:decoration-1 mt-2 sm:mt-0 font-inter"
               >
                 View all posts
               </Link>

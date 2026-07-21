@@ -15,7 +15,7 @@ const BlogPage = ({ userData }) => {
             From our blog
           </h1>
 
-          <span className="text-text-primary text-base sm:text-lg lg:text-xl font-sans">
+          <span className="text-text-primary text-base sm:text-lg lg:text-xl font-inter">
             Stories, inspiration, and creative work from our community.
           </span>
 
