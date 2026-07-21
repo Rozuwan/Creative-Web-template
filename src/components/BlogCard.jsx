@@ -1,7 +1,7 @@
 const BlogCard = ({ item, image }) => {
   return (
     <>
-      <div className="group flex flex-col">
+      <div className="group flex flex-col py-10 ">
         {/* Image */}
         <div className="overflow-hidden">
           <img
@@ -13,11 +13,11 @@ const BlogCard = ({ item, image }) => {
 
         {/* Content */}
         <div className="mt-8 flex flex-col gap-5">
-          <h3 className="font-cabinet text-[2rem] leading-[1.2] font-bold tracking-tight text-slate-900 group-hover:text-primary transition-colors">
+          <h3 className="font-cabinet text-2xl leading-[1.2] font-bold tracking-tight text-bg-primary hover:underline hover:decoration-2 hover:decoration-primary w-80">
             {item.blogTitle}
           </h3>
 
-          <p className="text-[20px] leading-9 text-slate-500">
+          <p className="text-base leading-5 text-text-primary">
             {item.blogDescription}
           </p>
 
@@ -29,9 +29,9 @@ const BlogCard = ({ item, image }) => {
               className="h-11 w-11 rounded-full object-cover"
             />
 
-            <p className="text-lg text-slate-500">
+            <p className="text-sm text-text-primary font-sans">
               By{" "}
-              <span className="font-semibold text-slate-900">{item.name}</span>
+              <span className="font-sm font-medium text-black font-sans hover:underline hover:decoration-2 hover:decoration-primary">{item.name}</span>
             </p>
           </div>
         </div>

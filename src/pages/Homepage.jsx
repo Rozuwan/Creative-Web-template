@@ -225,7 +225,7 @@ const Homepage = ({ userData }) => {
         </section>
         {/* END Sixth Section */}
         {/* Sevent Section */}
-        <section className="px-10 py-18">
+        <section className="px-10 py-5">
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-16 text-5xl font-cabinet font-extrabold text-bg-primary">
               Questions and answers
@@ -315,7 +315,7 @@ const Homepage = ({ userData }) => {
                 View all posts
               </Link>
             </div>
-            <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3 cursor-pointer">
               {userData.slice(0, 3).map((item, i) => (
                 <BlogCard key={i} item={item} image={images[i]} />
               ))}

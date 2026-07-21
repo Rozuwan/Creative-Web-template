@@ -4,12 +4,12 @@ import { usePicsum } from "../context/PiscumContext";
 
 const BlogPage = ({ userData }) => {
   const { images } = usePicsum();
-
+  
   return (
     <>
       <Navbar />
 
-      <section className="px-10 py-18 bg-gray-50">
+      <section className="px-10  bg-gray-50">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-[88px] font-extrabold font-cabinet">
             From our blog
