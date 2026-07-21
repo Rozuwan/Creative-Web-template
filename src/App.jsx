@@ -5,6 +5,8 @@ import Signup from "./pages/Signup";
 import { PicsumProvider } from "./context/PiscumContext";
 import BlogPage from "./pages/BlogPage";
 import BlogPost from "./pages/BlogPost";
+import ContactPage from "./pages/ContactPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 const userData = [
   {
@@ -142,6 +144,8 @@ const App = () => {
             path="/blog/:slug"
             element={<BlogPost userData={userData} />}
           />
+          <Route path="/contact" element={<ContactPage />}/>
+          <Route path="/privacy" element={<PrivacyPage />}/>
         </Routes>
       </PicsumProvider>
     </div>

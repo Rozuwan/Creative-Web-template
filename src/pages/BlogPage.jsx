@@ -1,14 +1,10 @@
-import { useEffect } from "react";
 import BlogCard from "../components/BlogCard";
 import Navbar from "../components/Navbar";
 import { usePicsum } from "../context/PiscumContext";
 
 const BlogPage = ({ userData }) => {
   const { images } = usePicsum();
-//   scrolls to top
-    useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
   return (
     <>
       <Navbar />

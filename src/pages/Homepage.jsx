@@ -13,6 +13,7 @@ import CreatorCard from "../components/CreatorCard";
 import PriceCard from "../components/PriceCard";
 import UserSlider from "../components/UserSlider";
 import BlogCard from "../components/BlogCard";
+import Footer from "../components/Footer";
 
 const stats = [
   { value: "27M", label: "Inspiration" },
@@ -298,6 +299,7 @@ const Homepage = ({ userData }) => {
                 </p>
               </div>
             </div>
+    <div className="w-full mt-20 h-px bg-gray-50" />
           </div>
         </section>
         {/* END Sevent Section */}
@@ -323,7 +325,27 @@ const Homepage = ({ userData }) => {
           </div>
         </section>
         {/* END Eighth Section */}
+        {/* Ninth section */}
+        {/* Ninth Section */}
+        <section className="px-6 py-8 ">
+          <div className="mx-auto max-w-6xl">
+            {/* Tilted Card */}
+            <div className="-rotate-2 bg-bg-primary px-5 py-16  ">
+              {/* Straight Content */}
+              <div className="flex rotate-2 flex-col items-center text-center gap-8 lg:flex-row lg:items-center lg:justify-between">
+                <div className="flex flex-row px-10 ">
+                  <h2 className="font-cabinet text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-5xl">
+                    Become a member of the best <br /> creative community
+                  </h2>
+                </div>
+                <Communitybtn />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* END Ninth section */}
       </main>
+      <Footer />
     </>
   );
 };
