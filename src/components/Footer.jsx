@@ -42,7 +42,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="#"
+              href="https://github.com/Rozuwan/Creative-Web-template"
               className="group flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 transition-all duration-300 hover:bg-primary"
             >
               <FaGithub className="text-lg text-primary transition-colors duration-300 group-hover:text-white" />
