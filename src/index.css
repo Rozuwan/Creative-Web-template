@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3573FC;
-  --color-primary-light: #8EB6F9;
+  --color-primary: #3573fc;
+  --color-primary-light: #8eb6f9;
 
-  --color-text-primary: #626A75;
-  --color-text-secondary: #E2E4E8;
+  --color-text-primary: #626a75;
+  --color-text-secondary: #e2e4e8;
 
-  --color-bg-primary: #1E2939;
-  --color-bg-secondary: #1E2939;
-  --color-bg-collections: #1E2939;
+  --color-bg-primary: #1e2939;
+  --color-bg-secondary: #1e2939;
+  --color-bg-collections: #1e2939;
 
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-black: #000000;
 }
 @font-face {
@@ -114,11 +114,15 @@ body {
   background: #2563eb;
 }
 /* User card sixth section swiper css */
+@media (min-width: 1024px) {
+  .UserCardSwiper {
+    padding-bottom: 0;
+  }
 
-.UserCardSwiper .swiper-pagination {
-    position: absolute !important;
-    left: unset !important;
-    right: 19% !important;
-    top: 65% !important;
-    width: fit-content !important;
+  .UserCardSwiper .swiper-pagination {
+    right: 30px !important;
+    bottom: 120px !important;
+    left: auto !important;
+    transform: none !important;
+  }
 }

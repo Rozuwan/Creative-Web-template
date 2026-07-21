@@ -297,11 +297,12 @@ const Homepage = () => {
         </section>
         {/* End Fifth Section */}
         {/* Sixth Section */}
-        <section className="relative px-10 ">
-          <div className="mx-auto max-w-6xl flex flex-col gap-15 ">
-            <div className="absolute left-1/2 top-50 h-70 w-[75%] max-w-6xl translate-x-[-55%] -translate-y-1/2 rotate-2 bg-gray-200 -z-10 "></div>
+        <section className="relative overflow-hidden px-6  lg:px-10">
+          <div className="mx-auto max-w-6xl">
+            
+            <div className="absolute left-1/2 top-1/2 -z-10 h-78 w-[90%] -translate-x-1/2 -translate-y-1/2 rotate-2  bg-gray-200 sm:h-56 sm:w-[88%] md:h-64 lg:h-72 lg:w-[75%]" />
 
-            <div className="relative mx-auto max-w-7xl">
+            <div className="relative">
               <UserSlider userData={userData} />
             </div>
           </div>
