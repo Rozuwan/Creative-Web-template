@@ -45,7 +45,7 @@ const Homepage = ({ userData }) => {
                 <span className="relative inline-block text-primary font-inter">
                   minds
                   <svg
-                    className="absolute -bottom-0.5 -left-2 "
+                    className="absolute -bottom-2.5 -left-2 "
                     viewBox="0 0 100 12"
                     preserveAspectRatio="none"
                   >
