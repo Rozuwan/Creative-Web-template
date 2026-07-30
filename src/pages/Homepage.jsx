@@ -40,19 +40,21 @@ const Homepage = ({ userData }) => {
       <main className="overflow-x-hidden">
         {/* First Section */}
         <section className="rounded-bl-[80px]  bg-gray-50 px-10 py-18 overflow-hidden">
-          {/* left side */}
-          <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
-            <motion.div
-              className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left"
-              initial={{ x: -120, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 1,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
+          <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left">
+            {/* left */}
+            <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
               <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left ">
-                <h1 className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold">
+                <motion.h1
+                  className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold"
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
                   The platform for creative{" "}
                   <span className="relative inline-block text-primary font-inter">
                     minds
@@ -71,14 +73,34 @@ const Homepage = ({ userData }) => {
                     </svg>
                   </span>
                   .
-                </h1>
+                </motion.h1>
 
-                <p className="max-w-155 text-base text-text-primary md:text-xl font-inter">
+                <motion.p
+                  className="max-w-155 text-base text-text-primary md:text-xl font-inter"
+                  initial={{ x: -10, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.15,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
                   Our landing page template works on all devices, so you only
                   have to set it up once, and get beautiful results forever.
-                </p>
+                </motion.p>
 
-                <div className="flex items-center justify-center gap-4 md:justify-start">
+                <motion.div
+                  className="flex items-center justify-center gap-4 md:justify-start"
+                  initial={{ x: -10, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.4,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
                   <Communitybtn />
                   <Link
                     to="/signin"
@@ -86,9 +108,19 @@ const Homepage = ({ userData }) => {
                   >
                     Sign In
                   </Link>
-                </div>
+                </motion.div>
                 {/* lower number details */}
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start">
+                <motion.div
+                  className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start"
+                  initial={{ y: -2, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.50,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
                   {stats.map(({ value, label }) => (
                     <div key={label}>
                       <h3 className="text-2xl font-bold font-inter">{value}</h3>
@@ -97,26 +129,24 @@ const Homepage = ({ userData }) => {
                       </p>
                     </div>
                   ))}
-                </div>
+                </motion.div>
               </div>
-            </motion.div>
-            {/* right side */}
-            <div className=" flex basis-full justify-center md:basis-2/5 md:justify-end">
-              <motion.div
-                initial={{ x: 120, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                  duration: 1,
-                  delay: 0.15,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-              >
-                <img
+              {/* right side */}
+              <div className=" flex basis-full justify-center md:basis-2/5 md:justify-end">
+                <motion.img
                   src={HeroImg}
                   alt="Creative minds platform hero illustration"
                   className="w-full max-w-full h-auto object-contain md:max-w-none md:scale-130 md:translate-x-55 md:translate-y-10"
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.9,
+                    delay: 0.15,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                 />
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
