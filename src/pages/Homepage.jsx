@@ -101,7 +101,12 @@ const Homepage = ({ userData }) => {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <Communitybtn />
+                  <Link
+                    to="/signup"
+                    className="cursor-pointer bg-primary text-white px-3 py-3 text-sm rounded-full active:scale-95 md:px-4 md:py-2 md:font-meduim md:text-base font-inter inline-block"
+                  >
+                    Join The Community
+                  </Link>{" "}
                   <Link
                     to="/signin"
                     className="inline-block rounded-full border border-gray-300 bg-white px-6 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95 font-inter"
@@ -117,7 +122,7 @@ const Homepage = ({ userData }) => {
                   viewport={{ once: true }}
                   transition={{
                     duration: 0.7,
-                    delay: 0.50,
+                    delay: 0.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
