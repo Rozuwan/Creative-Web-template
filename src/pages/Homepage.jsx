@@ -14,6 +14,8 @@ import PriceCard from "../components/PriceCard";
 import UserSlider from "../components/UserSlider";
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
+// motion import
+import { motion } from "motion/react";
 
 const stats = [
   { value: "27M", label: "Inspiration" },
@@ -38,62 +40,83 @@ const Homepage = ({ userData }) => {
       <main className="overflow-x-hidden">
         {/* First Section */}
         <section className="rounded-bl-[80px]  bg-gray-50 px-10 py-18 overflow-hidden">
+          {/* left side */}
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
-            <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left ">
-              <h1 className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold">
-                The platform for creative{" "}
-                <span className="relative inline-block text-primary font-inter">
-                  minds
-                  <svg
-                    className="absolute -bottom-2.5 -left-2 "
-                    viewBox="0 0 100 12"
-                    preserveAspectRatio="none"
+            <motion.div
+              className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left"
+              initial={{ x: -120, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <div className="flex basis-full flex-col items-center gap-8 text-center md:basis-3/5 md:items-start md:text-left ">
+                <h1 className="font-cabinet text-4xl font-bold md:text-[64px] lg:text-[88px] lg:font-extrabold">
+                  The platform for creative{" "}
+                  <span className="relative inline-block text-primary font-inter">
+                    minds
+                    <svg
+                      className="absolute -bottom-2.5 -left-2 "
+                      viewBox="0 0 100 12"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M2 8 Q50 1 98 8"
+                        stroke="#E0E0E7"
+                        strokeWidth="5"
+                        fill="none"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                  .
+                </h1>
+
+                <p className="max-w-155 text-base text-text-primary md:text-xl font-inter">
+                  Our landing page template works on all devices, so you only
+                  have to set it up once, and get beautiful results forever.
+                </p>
+
+                <div className="flex items-center justify-center gap-4 md:justify-start">
+                  <Communitybtn />
+                  <Link
+                    to="/signin"
+                    className="inline-block rounded-full border border-gray-300 bg-white px-6 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95 font-inter"
                   >
-                    <path
-                      d="M2 8 Q50 1 98 8"
-                      stroke="#E0E0E7"
-                      strokeWidth="5"
-                      fill="none"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-                .
-              </h1>
-
-              <p className="max-w-155 text-base text-text-primary md:text-xl font-inter">
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
-              </p>
-
-              <div className="flex items-center justify-center gap-4 md:justify-start">
-                <Communitybtn />
-                <Link
-                  to="/signin"
-                  className="inline-block rounded-full border border-gray-300 bg-white px-6 py-2 text-center font-medium text-gray-900 shadow-md hover:bg-primary hover:text-white active:scale-95 font-inter"
-                >
-                  Sign In
-                </Link>
+                    Sign In
+                  </Link>
+                </div>
+                {/* lower number details */}
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start">
+                  {stats.map(({ value, label }) => (
+                    <div key={label}>
+                      <h3 className="text-2xl font-bold font-inter">{value}</h3>
+                      <p className="text-base font-inter font-normabasetextprima5ytext-text-primary">
+                        {label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start">
-                {stats.map(({ value, label }) => (
-                  <div key={label}>
-                    <h3 className="text-2xl font-bold font-inter">{value}</h3>
-                    <p className="text-base font-inter font-normabasetextprima5ytext-text-primary">
-                      {label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
+            </motion.div>
+            {/* right side */}
             <div className=" flex basis-full justify-center md:basis-2/5 md:justify-end">
-              <img
-                src={HeroImg}
-                alt="Creative minds platform hero illustration"
-                className="w-full max-w-full h-auto object-contain md:max-w-none md:scale-130 md:translate-x-55 md:translate-y-10"
-              />
+              <motion.div
+                initial={{ x: 120, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 1,
+                  delay: 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <img
+                  src={HeroImg}
+                  alt="Creative minds platform hero illustration"
+                  className="w-full max-w-full h-auto object-contain md:max-w-none md:scale-130 md:translate-x-55 md:translate-y-10"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
@@ -299,7 +322,7 @@ const Homepage = ({ userData }) => {
                 </p>
               </div>
             </div>
-    <div className="w-full mt-20 h-px bg-gray-50" />
+            <div className="w-full mt-20 h-px bg-gray-50" />
           </div>
         </section>
         {/* END Sevent Section */}
