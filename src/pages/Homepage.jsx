@@ -31,7 +31,7 @@ const btnData = [
 ];
 
 const Homepage = ({ userData }) => {
-  const { images, loading, error,index } = usePicsum();
+  const { images, loading, error, index } = usePicsum();
   return (
     <>
       <Navbar />
@@ -179,9 +179,7 @@ const Homepage = ({ userData }) => {
             </div>
 
             <div className="relative">
-              <div
-                className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
-              >
+              <div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {loading ? (
                   <div className="col-span-3 flex items-center justify-center py-20">
                     Loading...
@@ -193,7 +191,9 @@ const Homepage = ({ userData }) => {
                 ) : (
                   images
                     .slice(0, 9)
-                    .map((image) => <Card key={image.id} image={image} index={index} />)
+                    .map((image) => (
+                      <Card key={image.id} image={image} index={index} />
+                    ))
                 )}
               </div>
 
@@ -228,9 +228,27 @@ const Homepage = ({ userData }) => {
               the world
             </h2>
             <div className="mt-15 grid lg:grid-cols-2 gap-16 items-center">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+              <motion.div
+                className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6"
+                initial={{
+                  opacity: 0,
+                  y: 25,
+                  scale: 0.95,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 170,
+                  damping: 16,
+                  delay: index * 0.05,
+                }}
+              >
                 <CreatorCard userData={userData} images={images} />
-              </div>
+              </motion.div>
 
               <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <img
