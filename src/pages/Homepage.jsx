@@ -16,7 +16,6 @@ import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
 // motion import
 import { motion } from "motion/react";
-
 const stats = [
   { value: "27M", label: "Inspiration" },
   { value: "14K", label: "Creators" },
@@ -32,7 +31,7 @@ const btnData = [
 ];
 
 const Homepage = ({ userData }) => {
-  const { images, loading, error } = usePicsum();
+  const { images, loading, error,index } = usePicsum();
   return (
     <>
       <Navbar />
@@ -117,7 +116,7 @@ const Homepage = ({ userData }) => {
                 {/* lower number details */}
                 <motion.div
                   className="mt-8 flex flex-wrap items-center justify-center gap-15 md:justify-start"
-                  initial={{ y:-1, opacity: 0 }}
+                  initial={{ y: -1, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
@@ -142,7 +141,7 @@ const Homepage = ({ userData }) => {
                   src={HeroImg}
                   alt="Creative minds platform hero illustration"
                   className="w-full max-w-full h-auto object-contain md:max-w-none md:scale-130 md:translate-x-55 md:translate-y-10"
-                  initial={{ x:5, opacity: 0 }}
+                  initial={{ x: 5, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
@@ -180,7 +179,9 @@ const Homepage = ({ userData }) => {
             </div>
 
             <div className="relative">
-              <div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+              <div
+                className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+              >
                 {loading ? (
                   <div className="col-span-3 flex items-center justify-center py-20">
                     Loading...
@@ -192,7 +193,7 @@ const Homepage = ({ userData }) => {
                 ) : (
                   images
                     .slice(0, 9)
-                    .map((image) => <Card key={image.id} image={image} />)
+                    .map((image) => <Card key={image.id} image={image} index={index} />)
                 )}
               </div>
 

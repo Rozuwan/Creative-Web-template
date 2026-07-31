@@ -1,10 +1,21 @@
 // Second section grid card
 
 import { FaRegHeart } from "react-icons/fa";
+import { motion } from "motion/react";
 
-const Card = ({ image }) => {
+const Card = ({ image, index }) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl">
+    <motion.div
+      className="group relative overflow-hidden rounded-2xl"
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.60,
+        delay: index * 0.08,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
       {" "}
       {/* Image */}
       <img
@@ -29,7 +40,7 @@ const Card = ({ image }) => {
           <span className="font-medium font-inter">4K</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
