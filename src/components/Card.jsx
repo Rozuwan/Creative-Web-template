@@ -3,18 +3,17 @@
 import { FaRegHeart } from "react-icons/fa";
 import { motion } from "motion/react";
 
-const Card = ({ image, index }) => {
+const Card = ({ image }) => {
   return (
     <motion.div
       className="group relative overflow-hidden rounded-2xl"
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{
-        duration: 0.60,
-        delay: index * 0.08,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      initial={{ opacity: 0, y: -30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    duration: 1.5,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
     >
       {" "}
       {/* Image */}

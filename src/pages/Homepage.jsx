@@ -120,7 +120,7 @@ const Homepage = ({ userData }) => {
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.7,
+                    duration: 0.5,
                     delay: 0.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
@@ -145,7 +145,7 @@ const Homepage = ({ userData }) => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.9,
+                    duration: 1.5,
                     delay: 0.15,
                     ease: [0.22, 1, 0.36, 1],
                   }}
@@ -396,7 +396,18 @@ const Homepage = ({ userData }) => {
             </div>
             <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3 cursor-pointer">
               {userData.slice(0, 3).map((item, i) => (
-                <BlogCard key={i} item={item} image={images[i]} />
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: -30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    duration: 1.5,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <BlogCard item={item} image={images[i]} />
+                </motion.div>
               ))}
             </div>
           </div>

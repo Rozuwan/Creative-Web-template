@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const BlogCard = ({ item, image }) => {
   return (
     <>
-      <Link to={`/blog/${item.slug}`} className="group flex flex-col py-6 sm:py-10">
+      <Link to={`/blog/${item.slug}`} className="group flex flex-col py-6 sm:py-10 ">
         {/* Image */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-2xl">
           <img
             src={image?.download_url}
             alt={item.blogTitle}

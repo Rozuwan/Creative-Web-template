@@ -1,7 +1,7 @@
 import BlogCard from "../components/BlogCard";
 import Navbar from "../components/Navbar";
 import { usePicsum } from "../context/PiscumContext";
-
+import { motion } from "motion/react";
 const BlogPage = ({ userData }) => {
   const { images } = usePicsum();
 
@@ -21,7 +21,19 @@ const BlogPage = ({ userData }) => {
 
           <div className="mt-8 sm:mt-10 lg:mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {userData.map((item, i) => (
-              <BlogCard key={i} item={item} image={images[i]} />
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 1.5,
+                  delay: i * 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <BlogCard item={item} image={images[i]} />
+              </motion.div>
             ))}
           </div>
         </div>
