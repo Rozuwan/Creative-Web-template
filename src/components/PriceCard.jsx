@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { motion } from "motion/react";
 const PriceCard = () => {
   const [billing, setBilling] = useState("yearly");
 
@@ -37,7 +37,16 @@ const PriceCard = () => {
       {/* Cards */}
       <div className="grid lg:grid-cols-2 gap-10">
         {/* Starter */}
-        <div className="rounded-2xl p-5 border border-gray-200 bg-white">
+        <motion.div
+          className="rounded-2xl p-5 border border-gray-200 bg-white"
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
           <h3 className="text-xl font-semibold font-cabinet mb-2">Starter</h3>
 
           <h1 className="text-5xl font-cabinet font-bold mb-5">Free</h1>
@@ -50,7 +59,9 @@ const PriceCard = () => {
               Join The Community
             </button>
           </Link>
-          <h4 className="font-semibold mt-6 mb-5 font-inter">Features include:</h4>
+          <h4 className="font-semibold mt-6 mb-5 font-inter">
+            Features include:
+          </h4>
 
           <div className="space-y-2">
             {[
@@ -65,10 +76,17 @@ const PriceCard = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Business */}
-        <div className="relative rounded-2xl p-5 bg-bg-primary text-white">
+        <motion.div className="relative rounded-2xl p-5 bg-bg-primary text-white"
+          initial={{ x: 10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}>
           <span className="absolute -top-4 right-8 bg-green-300 text-green-900 px-3 py-1 rounded-full font-semibold font-inter">
             Most Popular
           </span>
@@ -95,7 +113,9 @@ const PriceCard = () => {
               Start Free Trial
             </button>
           </Link>
-          <h4 className="font-semibold mt-6 mb-5 font-inter">All free features, plus:</h4>
+          <h4 className="font-semibold mt-6 mb-5 font-inter">
+            All free features, plus:
+          </h4>
 
           <div className="space-y-2">
             {[
@@ -111,7 +131,7 @@ const PriceCard = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
