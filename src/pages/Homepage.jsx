@@ -49,8 +49,7 @@ const Homepage = ({ userData }) => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.7,
-                    delay: 0,
+                    duration: 1.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
@@ -80,8 +79,7 @@ const Homepage = ({ userData }) => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.7,
-                    delay: 0.15,
+                    duration: 1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
@@ -95,8 +93,7 @@ const Homepage = ({ userData }) => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.7,
-                    delay: 0.4,
+                    duration: 1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
@@ -120,8 +117,7 @@ const Homepage = ({ userData }) => {
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.5,
-                    delay: 0.5,
+                    duration: 1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
@@ -142,11 +138,9 @@ const Homepage = ({ userData }) => {
                   alt="Creative minds platform hero illustration"
                   className="w-full max-w-full h-auto object-contain md:max-w-none md:scale-130 md:translate-x-55 md:translate-y-10"
                   initial={{ x: 5, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  viewport={{ once: true }}
+                  animate={{ x: 0, opacity: 1 }}
                   transition={{
                     duration: 1.5,
-                    delay: 0.15,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 />
